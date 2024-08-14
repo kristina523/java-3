@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Поле для вывода результата -->
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#f0f0f0"
+            android:gravity="end"
+            android:padding="16dp"
+            android:text="0"
+            android:textSize="36sp" />
+
+        <!-- Кнопки с цифрами и операциями -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/result_text"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="4"
+            android:padding="8dp"
+            android:rowCount="6">
+
+            <!-- Цифры -->
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="7" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="8" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="9" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="/" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="4" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="5" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="6" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="*" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="1" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="2" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="3" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="-" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDigitClick"
+                android:text="0" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onDotClick"
+                android:text="." />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onEqualClick"
+                android:text="=" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="+" />
+
+            <!-- Дополнительные функции -->
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onFunctionClick"
+                android:text="log" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onFunctionClick"
+                android:text="√" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="^" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onOperatorClick"
+                android:text="%" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:onClick="onClearClick"
+                android:text="C" />
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
